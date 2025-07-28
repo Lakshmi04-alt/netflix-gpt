@@ -8,7 +8,8 @@ import {signInWithEmailAndPassword } from "firebase/auth";
 import {  updateProfile } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
-import { USER_ICON } from '../utils/constants';
+import { BG_URL, USER_ICON } from '../utils/constants';
+
 
 
 const Login = () => {
@@ -24,11 +25,7 @@ const Login = () => {
   const handleButtonClick=()=>{
     // Validate the Form Data
    
-   
-
-
-
-      const message = checkValidData(
+       const message = checkValidData(
         email.current.value,
         password.current.value,
       
@@ -94,10 +91,7 @@ const Login = () => {
 
       }
 
-     
-  
-
-  }
+   }
 
   const toggleSignInForm=()=>{
 
@@ -109,7 +103,7 @@ const Login = () => {
       <Header/>
       <div>
   <img className='absolute'
-      src="https://assets.nflxext.com/ffe/siteui/vlv3/a927b1ee-784d-494a-aa80-cf7a062d2523/web/IN-en-20250714-TRIFECTA-perspective_5acb7337-c372-45ec-ae12-ddb110e6ad78_large.jpg" alt="image">
+      src={BG_URL} alt="image">
       </img>
   </div>
    <form onSubmit={(e)=>e.preventDefault()}
