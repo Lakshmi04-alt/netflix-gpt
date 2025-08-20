@@ -1,20 +1,21 @@
 import React from 'react'
 import GptSearchBar from './GptSearchBar';
-import MovieSuggestions from './MovieSuggestions';
+import GptMovieSuggestions from './GptMovieSuggestions';
 import { BG_URL } from '../utils/constants';
 
 const GptSearch = () => {
   return (
-    <div>
-      <div>
-     <img className='absolute -z-10'
-      src={BG_URL} alt="image">
+    <>
+    <div className='fixed -z-10'>
+     <img className='h-screen object-cover' src={BG_URL} alt="image">
       </img>
      </div>
+    <div className=''>
+      
      <GptSearchBar/>
-     <MovieSuggestions/>
+     <GptMovieSuggestions/>
     </div>
-  
+  </>
 )};
 
 export default GptSearch

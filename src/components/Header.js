@@ -68,12 +68,12 @@ return()=> unsubscribe();
   }
 
   return (
-    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10  flex justify-between">
+    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10  flex flex-col md:flex-row justify-between  ">
       
-      <img className='w-44 '
+      <img className='w-44 mx-auto md:mx-0'
      src={LOGO_URL} alt="Logo"></img>
      {user && 
-     <div className="flex ">
+     <div className="flex justify-between">
         { 
         showGptSearch&&
           <select className="p-2 bg-gray-900 text-white m-2" onChange={handleLanguageChange}>
@@ -89,7 +89,7 @@ return()=> unsubscribe();
          {showGptSearch? "Homepage": "GPT Search"} 
           </button>
         <img 
-         alt="usericon" className="h-12 w-12 m-2"
+         alt="usericon" className="hidden md:block h-12 w-12 m-2"
          src={USER_ICON}
         
         />
