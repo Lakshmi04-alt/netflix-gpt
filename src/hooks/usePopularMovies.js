@@ -8,8 +8,8 @@ const usePopularMovies = () =>{
 //fetch data from tmdb api and update store
   const dispatch=useDispatch();
 
-  const popularMovies = 
-  useSelector((store)=>store.movies.popularMovies);
+  // const popularMovies = 
+  // useSelector((store)=>store.movies.popularMovies);
 
    const getPopularMovies=async()=>{
     const data=await fetch("https://api.themoviedb.org/3/tv/popular",
@@ -21,7 +21,7 @@ const usePopularMovies = () =>{
    };
 
    useEffect(()=>{
-     !popularMovies && getPopularMovies();
+    getPopularMovies();
     
    },[]);
 };
